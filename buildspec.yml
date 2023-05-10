@@ -1,0 +1,28 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 16
+    commands:
+      - node -v
+      - npm -v
+  pre_build:
+    commands:
+      - echo Entered the install phase...
+      - sudo yarn
+  build:
+    commands:
+      - sudo yarn add pm2 -g
+      - sudo yarn build
+  post_build:
+    commands:
+	  - cd ./koreanbabo
+	  - zip -qr build-test.zip ./*
+	  - mv build-test.zip
+artifacts:
+	files:
+		- build-test.zip
+		- appspec.yml
+		- scripts/*
+	overwrite: true
