@@ -17,7 +17,7 @@ phases:
       - sudo yarn build
   post_build:
     commands:
-      - cd ./koreanbabo
+      - cd ./build
       - zip -qr build-test.zip ./*
       - mv build-test.zip
 artifacts:
