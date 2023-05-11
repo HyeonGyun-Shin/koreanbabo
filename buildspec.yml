@@ -25,5 +25,4 @@ artifacts:
     - build-test.zip
     - appspec.yml
     - scripts/*
-    - "**/*"
   overwrite: true
