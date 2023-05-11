@@ -2,14 +2,12 @@ version: 0.0
 os: linux
 files:
   - source: /
-  destination: /home/ec2-user/koreanbabo/
-  overwrite: yes
-	
+    destination: /home/ec2-user/koreanbabo/
+    overwrite: yes	
 hooks:
   AfterInstall:
   - location: scripts/after_install.sh
     runas: ec2-user
-
   ApplicationStart:
   - location: scripts/start_server.sh
     runas: ec2-user
