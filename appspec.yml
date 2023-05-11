@@ -3,14 +3,14 @@ os: linux
 files:
   - source: /
     destination: /home/ec2-user/koreanbabo/
-	overwrite: yes
-file_exists_behavior: OVERWRITE
-	
+    overwrite: yes	
 hooks:
+  BeforeInstall:
+  - location: scripts/before_install.sh
+    runas: ec2-user
   AfterInstall:
-    - location: after_install.sh
-	  runas: ec2-user
-
+  - location: scripts/after_install.sh
+    runas: ec2-user
   ApplicationStart:
-    - location: start_server.sh
-	  runas: ec2-user
+  - location: scripts/start_server.sh
+    runas: ec2-user
