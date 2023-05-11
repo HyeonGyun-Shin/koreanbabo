@@ -3,7 +3,7 @@ os: linux
 files:
   - source: /
     destination: /home/ec2-user/koreanbabo/
-file_exists_behavior: RETAIN
+file_exists_behavior: OVERWRITE 
 permissions:
   - object: /
     pattern: "**"
@@ -13,6 +13,6 @@ hooks:
   AfterInstall:
   - location: scripts/after_install.sh
     runas: ec2-user
-      #  ApplicationStart:
-      #- location: scripts/start_server.sh
-      #runas: ec2-user
+  ApplicationStart:
+  - location: scripts/start_server.sh
+    runas: ec2-user
