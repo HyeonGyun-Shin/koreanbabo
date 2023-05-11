@@ -1,3 +1,3 @@
 #!/bin/bash
-sudo yarn pm2 kill
-sudo yarn pm2 start dist/main.js
+yarn pm2 kill
+yarn pm2 start dist/main.js
