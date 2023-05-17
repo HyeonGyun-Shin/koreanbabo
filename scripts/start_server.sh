@@ -1,5 +1,5 @@
 #!/bin/bash
-source ~/.bash_profile
+source ~/.bashrc
 cd /home/ec2-user/koreanbabo
 sudo chown ec2-user:ec2-user appspec.yml build-test.zip scripts/*
 yarn pm2 kill
