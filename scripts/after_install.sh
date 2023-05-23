@@ -3,4 +3,5 @@
 cd /home/ec2-user/koreanbabo
 
 # zip 파일 풀기
-unzip -o -d /home/ec2-user/koreanbabo/dist build-test.zip
+sudo chown ec2-user:ec2-user ./*
+
