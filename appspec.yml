@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /
+  - source: /artifacts/
     destination: /home/ec2-user/koreanbabo/
 file_exists_behavior: OVERWRITE
 hooks:
