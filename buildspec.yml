@@ -20,4 +20,6 @@ phases:
 artifacts:
   files:
     - "**/*"
+  exclude:
+    - node_modules/**
   overwrite: true
