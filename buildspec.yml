@@ -17,9 +17,9 @@ phases:
       - sudo yarn build
   post_build:
     commands:
-    - mkdir -p artifacts
-    - rsync -av --exclude='node_modules' . artifacts/
+      - mkdir artifacts
+      - rsync -av --exclude='node_modules' . artifacts/
 artifacts:
   files:
-    - "artifacts/**"
+    - "artifacts/*"
   overwrite: true
