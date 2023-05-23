@@ -17,8 +17,10 @@ phases:
       - sudo yarn build
   post_build:
     commands:
+    - mkdir -p artifacts
+    - cp -r * artifacts/
+    - rm -rf artifacts/node_modules
 artifacts:
   files:
-    - "**/*"
-    - "!node_modules/**"
+    - "artifacts/**"
   overwrite: true
