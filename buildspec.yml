@@ -21,5 +21,5 @@ phases:
       - find . -type f ! -path "./node_modules/*" -print0 | cpio -0pd artifacts/
 artifacts:
   files:
-    - "artifacts/**/*"
+    - "**/*"
   overwrite: true
