@@ -17,12 +17,7 @@ phases:
       - sudo yarn build
   post_build:
     commands:
-      - cd ./dist
-      - zip -qr build-test.zip ./*
-      - mv build-test.zip ../
 artifacts:
   files:
-    - build-test.zip
-    - appspec.yml
-    - scripts/*
+    - "**/*"
   overwrite: true
