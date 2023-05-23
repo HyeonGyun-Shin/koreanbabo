@@ -17,6 +17,8 @@ phases:
       - sudo yarn build
   post_build:
     commands:
+      - mkdir -p artifacts
+      - find . -type f ! -path "./node_modules/*" -print0 | cpio -0pd artifacts/
 artifacts:
   files:
     - "**/*"
