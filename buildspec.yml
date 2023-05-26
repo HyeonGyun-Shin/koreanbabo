@@ -10,10 +10,10 @@ phases:
   pre_build:
     commands:
       - echo Entered the install phase...
-      - sudo npm install
+      - npm install
   build:
     commands:
-      - sudo npm build
+      - npm build
   post_build:
     commands:
       - mkdir -p artifacts
