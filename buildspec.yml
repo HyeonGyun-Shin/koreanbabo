@@ -10,11 +10,10 @@ phases:
   pre_build:
     commands:
       - echo Entered the install phase...
-      - sudo yarn
+      - sudo npm install
   build:
     commands:
-      - sudo yarn add pm2 -g
-      - sudo yarn build
+      - sudo npm build
   post_build:
     commands:
       - mkdir -p artifacts
