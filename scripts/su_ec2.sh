@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo su - ec2-user
+su - ec2-user
