@@ -12,6 +12,4 @@ permissions:
 hooks:
   ApplicationStart:
   - location: scripts/su_ec2.sh
-    runas: ec2-user
   - location: scripts/start_server.sh
-    runas: ec2-user
